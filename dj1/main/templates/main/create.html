@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+{% block title %}
+ololololololololololololololololo
+{% endblock %}
+{% block main %}
+<div>oluh</div>
+<div>bitia and ilya</div>
+<div>gays</div>
+<div>
+    {% for el in bddata %}
+    <div>
+        <h3>
+            {{ el.name }}
+            {{ el.text }}
+
+        </h3>
+    </div>
+    {% endfor %}
+</div>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}<br>
+        <span>{{ error }}</span>
+        <button type="submit">ищи себя в бд</button><br>
+    </form>
+</div>
+{% endblock %}

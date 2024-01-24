@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+{% block title %}
+ololololololololololololololololo
+{% endblock %}
+{% block main %}
+<div>oluh</div>
+<div>bitia and ilya</div>
+<div>gays</div>
+<a href="{% urls 'about'% }">about</a>
+<div>
+    {% for el in bd %}
+    <div>
+        <h3>
+            {{ el.name }}
+            {{ el.text }}
+
+        </h3>
+    </div>
+    {% endfor %}
+</div>
+<div>
+    <a href="{% url 'about' %}">about</a>
+    <a href="{% url 'create'  %}">create</a>
+</div>
+{% endblock %}
